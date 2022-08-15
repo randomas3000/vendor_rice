@@ -29,12 +29,12 @@ CUSTOM_SECURITY_PATCH := 2022-08-05
 
 # Rice properties
 PRODUCT_PRODUCT_PROPERTIES += \
-    ro.rice.maintainer=$(RICE_MAINTAINER) \
+    ro.rice.maintainer=RaidenIshigami \
     ro.rice.code=$(RICE_CODE) \
     ro.rice.packagetype=$(PACKAGE_BUILD_TYPE) \
     ro.rice.releasetype=$(RICE_BUILD_TYPE) \
     ro.rice.version?=$(RICE_VERSION) \
-    ro.rice.chipset?=$(RICE_CHIPSET) \
+    ro.rice.chipset?=SDM439 \
     ro.rice.build.version=$(LINEAGE_VERSION) \
     ro.rice.display.version?=$(LINEAGE_DISPLAY_VERSION) \
     ro.rice.platform_release_codename=$(RICE_FLAVOR) \
