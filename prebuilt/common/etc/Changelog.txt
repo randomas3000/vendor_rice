@@ -14,29 +14,33 @@ AOSP = Cherry-pick changes from AOSP gerrit/master branch
 
 ==== riceDroid Additions ===== changes we did or modified
 * Adapted CAF/CLO revisions to AOSP
+  - CAF/CLO tag patches taken from CAF/CLO based roms [AOSPA]
+  - CAF/CLO optimization ports (needs to be tuned/enabled via device tree)
 * Added back Lockscreen Blur Media Filters [eldainosor]
  - [MD]: Make blur radius configurable
 * Dialer Improvements:
 - Improved Design based on google's M3 design
 - [CP]: Crowdin updates [gwolf2u]
-* Fixed statusbar, keyguard and QSB paddings
+* Fixed statusbar, keyguard and QSB views paddings
+* Fixed systemui restart issues (combined signal etc, removed systemui restart prompt, just use the power menu one)
 * Improved Dashboard Styles
 - automatically detects if build variant (vanilla/pixel)
 - Added AOSP style
 - Fixed Arcane Style usercard avatar
-* Introducing System Color Palettes
-  - extended monet altering themes with two modes: Black theme and Vivid theme [SagarMakhar - blacktheme overlay]
-  - notes: quite buggy atm, vivid theme can only be set while on light mode (but works and persists on dark mode)
-  - black theme: only for dark mode
-  - vivid theme: Improved color palettes [kdrag0n]
-* Minor monet chroma improvements
 * Minor Volume Panel redesign
+* QS Weather view position customization
 * [MD] Resizeable QS Date, QS and Statusbar clock [StarkDroid|Corvus-AOSP]
+- Reverted back to vivid monet shades (sorry black theme users)
 * [AOSP][CP][MD] runtime improvements and August ASB patches from master branch [neobuddy89|crdroid team|lineageos]
 * [MD] Statusbar Clock background chip [StarkDroid|Corvus-AOSP]
 * [MD] Statusbar paddings customizations [IDontCare-05|CrisbalGreece]
 * SushiLauncher: Spicy Tuna
+  - [CP]Add Weather view from OmniJaws [StarkDroid|Corvus AOSP]
+  - Apply google smartspace layout
+  - Fixed google search bar color on light mode
   - Increased max allowed blur radius
+  - Introduce Extended at a glance
+  - [CP] preference for wallpaper scrolling [neobuddy89|crdroid]
   - [CP] restore blur on configuration changes [ritujb]
   - Fixed recents apps resources tint
   - Applied google M3 color shades
@@ -48,6 +52,7 @@ AOSP = Cherry-pick changes from AOSP gerrit/master branch
  - added turkish translations [Lafactorial]
  - added chinese translations [xingxingchuan|Fldicoahkiin]
  - made more strings translatable ~ if you want it to be merged to the source please send a message to the group with #translation with url of your repo, we will cherrypick it and add it to source for you with authorship intact (our crowdin is limited).
+ * Vibrant monet color scheme based from android 13 monet styles
 
 ==== Cherry-picked features Additions ==== purely cherry-picked changes we didnt modified
 * crDroid August Upstream changes [neobuddy89|gwolf2u|iusmac|shevt]
@@ -56,21 +61,24 @@ AOSP = Cherry-pick changes from AOSP gerrit/master branch
 - Fixed handwave & proximity pulse conflict
 - Crowdin Translations
 * Fixed Power menu systemUI restart showing dialog when restarting [ezio84]
+* Fixed user profile photo picker crash [tmjosten|Evolution X]
+* Improved Statusbar clock background paddings - [StarkDroid|Corvus-AOSP]
 * LineageOS August Upstream changes [luk1337|althafvly|bgcngm|sevenrock|chirayudesai|stricted|mikeNg|haggertk]
 - August ASB patches
 - Lineage dependencies upstream (HALS, blobs, sepolicy more)
 _ Lineage translations updates
 _ Lineage frameworks patches and improvements
-* Show August security patch on settings [jhenrique|PixelExperience] 
+* Show August security patch on settings [jhenrique09|PixelExperience] 
 * Show ripple on face unlock [xyzuan|xdroid OSS]
-* Fix user profile photo picker crash [tmjosten|Evolution X]
 * Switch notification background to monet on heads up [DillerOFire|Project Fluid]
+* Toast icon toggle and improvements [LordClockan|SagarMakhar|BoredOutOfMyGit|jhenrique09|idoybh]
+* QuickSettings Weather view - [StarkDroid|Corvus-AOSP]
+* Weather provider from OmniRom - [maxwen]
 
 Big thanks to pimpmaneaton for these fork changes merged on main branch:
 * Big dotted/circle battery indicator [DennySPB]
 * ColorController: Fix getting default color [varund7726]
 * Lockscreen charging improvements [calebcabob|SagarMakhar]
-* Pulse improvements [TikkiX2|ezio84] 
 * QuickSettings vibrate/haptic feedback [mydongistiny|amartinz]
 * Screenshot shutter sound toggle [maxwen]
 
