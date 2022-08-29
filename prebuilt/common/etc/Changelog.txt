@@ -13,61 +13,72 @@ AOSP = Cherry-pick changes from AOSP gerrit/master branch
 ===== Start of Changelog for version 5.0 =====
 
 ==== riceDroid Additions ===== changes we did or modified
+* [AOSP][CP][MD] runtime improvements and August ASB patches from master branch [neobuddy89|crdroid team|lineageos]
+* Adapted and unmodified changes and fixes from android 13
 * Adapted CAF/CLO revisions to AOSP
   - CAF/CLO tag patches taken from CAF/CLO based roms [AOSPA]
   - CAF/CLO optimization ports (needs to be tuned/enabled via device tree)
 * Added back Lockscreen Blur Media Filters [eldainosor]
+* Android 13 music player and notification shade
  - [MD]: Make blur radius configurable
 * Dialer Improvements:
 - Improved Design based on google's M3 design
 - [CP]: Crowdin updates [gwolf2u]
+* Fixed animations lags by optimizing blur and renderscript usage
 * Fixed statusbar, keyguard and QSB views paddings
 * Fixed systemui restart issues (combined signal etc, removed systemui restart prompt, just use the power menu one)
 * Improved Dashboard Styles
 - automatically detects if build variant (vanilla/pixel)
 - Added AOSP style
 - Fixed Arcane Style usercard avatar
-* Minor Volume Panel redesign
-* QS Weather view position customization
+* Improved Lockscreen notifcation and smartspace paddings
 * [MD] Resizeable QS Date, QS and Statusbar clock [StarkDroid|Corvus-AOSP]
-- Reverted back to vivid monet shades (sorry black theme users)
-* [AOSP][CP][MD] runtime improvements and August ASB patches from master branch [neobuddy89|crdroid team|lineageos]
 * [MD] Statusbar Clock background chip [StarkDroid|Corvus-AOSP]
 * [MD] Statusbar paddings customizations [IDontCare-05|CrisbalGreece]
+* Minor Volume Panel redesign
+* QS Weather view position customization
+- Reverted back to vivid monet shades (sorry black theme users)
+* Redesigned battery and storage progress bars to OOS/RUI design pattern
+* Redesigned About phone layout banner [IacobIonut01|DotOS]
 * SushiLauncher: Spicy Tuna
   - [CP]Add Weather view from OmniJaws [StarkDroid|Corvus AOSP]
-  - Apply google smartspace layout
-  - Fixed google search bar color on light mode
-  - Increased max allowed blur radius
-  - Introduce Extended at a glance
   - [CP] preference for wallpaper scrolling [neobuddy89|crdroid]
   - [CP] restore blur on configuration changes [ritujb]
+  - Fine tuned material color shades
+  - Fixed google search bar color on light mode
   - Fixed recents apps resources tint
-  - Applied google M3 color shades
+  - Keyguard/lockscreen Android 13 zoom animation toggle
+  - Increased max allowed blur radius
+  - Introducing extended google smartspace layout [teamfiles - for the pixel launcher mod concept]
   - Redesign QuickSearchBar [teamfiles - for the pixel launcher mod concept]
 * Switched to glassy blur effect for background views, recents etc 
+* Switched to OOS 12/13 ui sound effects
 * System Shapes: Improved theming support
 * Toggle-able Translucent QS style [Project Fluid|elluzion|Androbuddy]
 * Translation support improvements 
- - added turkish translations [Lafactorial]
- - added chinese translations [xingxingchuan|Fldicoahkiin]
+ - updated turkish translations [Lafactorial]
+ - updated chinese translations [xingxingchuan|Fldicoahkiin]
+ - updated spanish translations [jesusvpct]
  - made more strings translatable ~ if you want it to be merged to the source please send a message to the group with #translation with url of your repo, we will cherrypick it and add it to source for you with authorship intact (our crowdin is limited).
  * Vibrant monet color scheme based from android 13 monet styles
 
 ==== Cherry-picked features Additions ==== purely cherry-picked changes we didnt modified
-* crDroid August Upstream changes [neobuddy89|gwolf2u|iusmac|shevt]
-- Android runtime Improvements and fixes
+* crDroid August Upstream changes [neobuddy89|gwolf2u|iusmac|shevt|xNombre]
+- Updated android runtime improvements and fixes as of 08/29/22
 - Fixed navigation bar theming
 - Fixed handwave & proximity pulse conflict
 - Crowdin Translations
 * Fixed Power menu systemUI restart showing dialog when restarting [ezio84]
 * Fixed user profile photo picker crash [tmjosten|Evolution X]
+* Improved vertical QS tile layout and animation [tmjosten|Evolution X]
 * Improved Statusbar clock background paddings - [StarkDroid|Corvus-AOSP]
 * LineageOS August Upstream changes [luk1337|althafvly|bgcngm|sevenrock|chirayudesai|stricted|mikeNg|haggertk]
 - August ASB patches
 - Lineage dependencies upstream (HALS, blobs, sepolicy more)
 _ Lineage translations updates
 _ Lineage frameworks patches and improvements
+* Redesign and animate battery and storage usage bars [StarkDroid|Corvus AOSP] 
+* Show media output dialog on volume panel [Arian16ka]
 * Show August security patch on settings [jhenrique09|PixelExperience] 
 * Show ripple on face unlock [xyzuan|xdroid OSS]
 * Switch notification background to monet on heads up [DillerOFire|Project Fluid]
