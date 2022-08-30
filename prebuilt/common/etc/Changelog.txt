@@ -25,6 +25,7 @@ AOSP = Cherry-pick changes from AOSP gerrit/master branch
 - Improved Design based on google's M3 design
 - [CP]: Crowdin updates [gwolf2u]
 * Fixed animations lags by optimizing blur and renderscript usage
+* Fix IME/keyboard overlapping with edittext elements
 * Fixed statusbar, keyguard and QSB views paddings
 * Fixed systemui restart issues (combined signal etc, removed systemui restart prompt, just use the power menu one)
 * Improved Dashboard Styles
@@ -37,9 +38,11 @@ AOSP = Cherry-pick changes from AOSP gerrit/master branch
 * [MD] Statusbar paddings customizations [IDontCare-05|CrisbalGreece]
 * Minor Volume Panel redesign
 * QS Weather view position customization
-- Reverted back to vivid monet shades (sorry black theme users)
 * Redesigned battery and storage progress bars to OOS/RUI design pattern
 * Redesigned About phone layout banner [IacobIonut01|DotOS]
+* Resolved splash animations randomly being cutted off
+* Resolved recent apps/overview losing input focus 
+* Reverted back to vivid monet shades (sorry black theme users)
 * SushiLauncher: Spicy Tuna
   - [CP]Add Weather view from OmniJaws [StarkDroid|Corvus AOSP]
   - [CP] preference for wallpaper scrolling [neobuddy89|crdroid]
@@ -61,17 +64,20 @@ AOSP = Cherry-pick changes from AOSP gerrit/master branch
  - updated spanish translations [jesusvpct]
  - made more strings translatable ~ if you want it to be merged to the source please send a message to the group with #translation with url of your repo, we will cherrypick it and add it to source for you with authorship intact (our crowdin is limited).
  * Vibrant monet color scheme based from android 13 monet styles
+ * Volume panel media output toggle
 
 ==== Cherry-picked features Additions ==== purely cherry-picked changes we didnt modified
 * crDroid August Upstream changes [neobuddy89|gwolf2u|iusmac|shevt|xNombre]
-- Updated android runtime improvements and fixes as of 08/29/22
+- Crowdin Translations
 - Fixed navigation bar theming
 - Fixed handwave & proximity pulse conflict
-- Crowdin Translations
+- Fixed qs customizer corner radius
+- Rounded corner improvements
 * Fixed Power menu systemUI restart showing dialog when restarting [ezio84]
 * Fixed user profile photo picker crash [tmjosten|Evolution X]
 * Improved vertical QS tile layout and animation [tmjosten|Evolution X]
 * Improved Statusbar clock background paddings - [StarkDroid|Corvus-AOSP]
+- Updated android runtime improvements and fixes as of 08/29/22
 * LineageOS August Upstream changes [luk1337|althafvly|bgcngm|sevenrock|chirayudesai|stricted|mikeNg|haggertk]
 - August ASB patches
 - Lineage dependencies upstream (HALS, blobs, sepolicy more)
